@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "146156753364",
-    "project_id": "flash-chat-8395d",
-    "storage_bucket": "flash-chat-8395d.appspot.com"
+    "project_number": "309442051174",
+    "project_id": "todo-app-766fb",
+    "storage_bucket": "todo-app-766fb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:146156753364:android:93f97cfe8b98dbbfbb8641",
+        "mobilesdk_app_id": "1:309442051174:android:ca833ed715668bb2e681a7",
         "android_client_info": {
-          "package_name": "co.RiaJindal.flash_chat"
+          "package_name": "co.RiaJindal.todo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "146156753364-1k640staj97tnb5i9qnc79doot9e0mlk.apps.googleusercontent.com",
+          "client_id": "309442051174-pbhitl1d89kp8niim8ccos5iff2lkqmb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDYZUa9x2NWuSm0P-oSq1-_Yqsv6Un-EFo"
+          "current_key": "AIzaSyD7Acz3PkCdkQh65py02jnKq1JIUGNijMI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "146156753364-1k640staj97tnb5i9qnc79doot9e0mlk.apps.googleusercontent.com",
+              "client_id": "309442051174-pbhitl1d89kp8niim8ccos5iff2lkqmb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

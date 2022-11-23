@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flash_chat/screens/tasks_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/components/reusable_button.dart';
 import 'package:flash_chat/constants.dart';
@@ -22,7 +23,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF001253),
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -33,9 +34,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             children: <Widget>[
               Hero(
                 tag: 'logo',
-                child: Container(
-                  height: 200.0,
-                  child: Image.asset('images/logo.png'),
+                child: CircleAvatar(
+                  radius: 100.0,
+                  backgroundColor: Colors.white,
+                  child: Icon(
+                    Icons.check,
+                    color: Colors.yellow,
+                    size: 100.0,
+                  ),
                 ),
               ),
               SizedBox(
@@ -76,7 +82,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email.trim(), password: password.trim());
                     if (newUser != null) {
-                      Navigator.pushNamed(context, ChatScreen.id);
+                      Navigator.pushNamed(context, TaskScreen.id);
                     }
                     setState(() {
                       showSpinner = false;

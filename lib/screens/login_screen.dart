@@ -1,4 +1,5 @@
 import 'package:flash_chat/screens/chat_screen.dart';
+import 'package:flash_chat/screens/tasks_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/components/reusable_button.dart';
 import 'package:flash_chat/constants.dart';
@@ -21,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF001253),
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -32,9 +33,14 @@ class _LoginScreenState extends State<LoginScreen> {
             children: <Widget>[
               Hero(
                 tag: 'logo',
-                child: Container(
-                  height: 200.0,
-                  child: Image.asset('images/logo.png'),
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 100.0,
+                  child: Icon(
+                    Icons.check,
+                    color: Colors.yellow,
+                    size: 100.0,
+                  ),
                 ),
               ),
               SizedBox(
@@ -55,6 +61,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 onChanged: (value) {
                   password = value;
                 },
+                style: TextStyle(
+                  color: Colors.white,
+                ),
                 obscureText: true,
                 decoration: kTextInputDecoration.copyWith(
                   hintText: 'Enter your password',
@@ -65,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ReusableButton(
                 text: 'Log in',
-                color: Colors.lightBlueAccent,
+                color: Colors.blueAccent,
                 onPress: () async {
                   setState(() {
                     showSpinner = true;
@@ -76,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     final existingUser = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);
                     if (existingUser != null) {
-                      Navigator.pushNamed(context, ChatScreen.id);
+                      Navigator.pushNamed(context, TaskScreen.id);
                     }
                     setState(() {
                       showSpinner = false;

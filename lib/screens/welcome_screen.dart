@@ -20,7 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this);
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+    animation = ColorTween(begin: Colors.blueGrey, end: Color(0xFF001253))
         .animate(controller);
     controller.forward();
     controller.addListener(() {
@@ -45,20 +45,29 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Hero(
                   tag: 'logo',
-                  child: Container(
-                    child: Image.asset('images/logo.png'),
-                    height: 60.0,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: Icon(
+                      Icons.check,
+                      color: Colors.yellow,
+                      size: 40.0,
+                    ),
+                    radius: 30.0,
                   ),
                 ),
+                SizedBox(
+                  width: 20.0,
+                ),
                 Text(
-                  'Flash Chat',
+                  'ToDo',
                   style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white),
                 ),
               ],
             ),
@@ -67,7 +76,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ),
             ReusableButton(
               text: 'Log in',
-              color: Colors.lightBlueAccent,
               onPress: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
