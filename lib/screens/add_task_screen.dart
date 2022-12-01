@@ -44,7 +44,24 @@ class AddTaskScreen extends StatelessWidget {
                 color: Colors.black,
               ),
               decoration: InputDecoration(
+                  border: UnderlineInputBorder(),
+                  hintText: 'Add Expense Title'),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            TextFormField(
+              autofocus: true,
+              textAlign: TextAlign.center,
+              onChanged: (value) {
+                taskTitle = value;
+              },
+              style: TextStyle(
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
                 border: UnderlineInputBorder(),
+                hintText: 'Add Expense Amount',
               ),
             ),
             SizedBox(
@@ -57,7 +74,7 @@ class AddTaskScreen extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: Text(
-                'Add Task',
+                'Add Expense',
                 style: TextStyle(color: Colors.white),
               ),
               style: TextButton.styleFrom(

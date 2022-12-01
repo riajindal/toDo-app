@@ -63,7 +63,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   width: 20.0,
                 ),
                 Text(
-                  'ToDo',
+                  'Expenses',
                   style: TextStyle(
                       fontSize: 45.0,
                       fontWeight: FontWeight.w900,

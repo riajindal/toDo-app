@@ -54,7 +54,7 @@ class TaskScreen extends StatelessWidget {
                       width: 10.0,
                     ),
                     Text(
-                      'ToDo',
+                      'Expenses',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 50.0,
@@ -65,7 +65,7 @@ class TaskScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0),
                 Text(
-                  "${Provider.of<TaskData>(context).taskCount} Tasks",
+                  "${Provider.of<TaskData>(context).taskCount} Expenses",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0,

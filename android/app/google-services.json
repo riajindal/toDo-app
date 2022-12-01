@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:309442051174:android:8679288061e5c56ee681a7",
+        "android_client_info": {
+          "package_name": "co.RiaJindal.expenses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309442051174-pbhitl1d89kp8niim8ccos5iff2lkqmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Acz3PkCdkQh65py02jnKq1JIUGNijMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309442051174-pbhitl1d89kp8niim8ccos5iff2lkqmb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:309442051174:android:ca833ed715668bb2e681a7",
         "android_client_info": {
           "package_name": "co.RiaJindal.todo"

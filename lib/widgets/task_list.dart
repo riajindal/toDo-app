@@ -50,8 +50,8 @@ class _TasksListState extends State<TasksList> {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title:
-                        Text("Are you sure you would like to delete the task?"),
+                    title: Text(
+                        "Are you sure you would like to delete the expense?"),
                     actions: [
                       TextButton(
                           onPressed: () {
