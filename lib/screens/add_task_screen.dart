@@ -40,6 +40,9 @@ class AddTaskScreen extends StatelessWidget {
               onChanged: (value) {
                 taskTitle = value;
               },
+              style: TextStyle(
+                color: Colors.black,
+              ),
               decoration: InputDecoration(
                 border: UnderlineInputBorder(),
               ),
